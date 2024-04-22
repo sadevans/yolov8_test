@@ -3,6 +3,7 @@ from ultralytics import YOLO
 import numpy as np
 from tqdm import tqdm
 import argparse
+import subprocess
 from utils import compute_iou
 
 def count_cars(model, video, output_path):
