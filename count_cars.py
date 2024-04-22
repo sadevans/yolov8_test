@@ -78,6 +78,8 @@ def count_cars(model, video, output_path):
         
     output_video.release()
     video.release()
+    subprocess.run(
+        ["ffmpeg",  "-i", output_path,"-crf","18","-preset","veryfast","-hide_banner","-loglevel","error","-vcodec","libx264",output_path])
 
         
    
